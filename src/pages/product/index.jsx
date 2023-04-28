@@ -20,7 +20,7 @@ const ProductPage = ({productId}) => {
       </div>
       <iframe
         title="reviewtwits"
-        src={`https://localhost:3000/review/write?productId=${window.location.href}`}
+        src={`https://reviewtwits.shop/review/write?productId=${window.location.href}`}
         width="100%"
         height="700px"
       ></iframe>
