@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import ProductPage from "./pages/product";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Route to="/product" element={<ProductPage productId={123} />} />
     </div>
   );
 }
+
+const Route = ({to, element}) => {
+  // const [url, setUrl] = useState('')
+  const currentURL = window.location.href;
+  const currentPathname = currentURL.split("/").at(-1);
+
+  //localhost:3001/service?product=product
+
+  // if (to === "/" + currentPathname) {
+  //   return <>{element}</>;
+  // }
+
+  console.log(window.location.search);
+
+  return <>{element}</>;
+};
 
 export default App;
