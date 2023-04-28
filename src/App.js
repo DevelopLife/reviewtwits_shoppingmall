@@ -12,8 +12,8 @@ function App() {
 
 const Route = ({to, element}) => {
   // const [url, setUrl] = useState('')
-  const currentURL = window.location.href;
-  const currentPathname = currentURL.split("/").at(-1);
+  // const currentURL = window.location.href;
+  // const currentPathname = currentURL.split("/").at(-1);
 
   //localhost:3001/service?product=product
 
