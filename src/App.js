@@ -4,26 +4,22 @@ import ProductPage from "./pages/product";
 
 function App() {
   return (
-    <div className="App">
-      <Route to="/product" element={<ProductPage productId={123} />} />
-    </div>
+    <>
+      <head>
+        <meta
+          property="og:image"
+          content="//thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/290346317532916-57e0ca03-9d04-4aed-b5ec-19442d97c7ac.png"
+        />
+        <meta
+          property="og:title"
+          content="코멧 사선컷팅 테이프 크리너 핸들 + 거치대 세트"
+        ></meta>
+      </head>
+      <div className="App">
+        <ProductPage />
+      </div>
+    </>
   );
 }
-
-const Route = ({to, element}) => {
-  // const [url, setUrl] = useState('')
-  // const currentURL = window.location.href;
-  // const currentPathname = currentURL.split("/").at(-1);
-
-  //localhost:3001/service?product=product
-
-  // if (to === "/" + currentPathname) {
-  //   return <>{element}</>;
-  // }
-
-  console.log(window.location.search);
-
-  return <>{element}</>;
-};
 
 export default App;
